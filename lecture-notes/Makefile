@@ -1,6 +1,6 @@
 VERSION=0.9-prerelease
 
-TARGETS=linux-command.html
+TARGETS=linux-command.html devel-tools.html
 
 html: $(TARGETS)
 
