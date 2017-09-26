@@ -1,5 +1,14 @@
 # 개발 도구 실습
 
+## 실습 업로드
+* webbrowser로 https://oslab.pythonanywhere.com/ 접속하여 업로드
+* curl을 써서 업로드
+    - curl -u 아이디:패스워드 -F 'file=@test.txt' https://oslab.pythonanywhere.com/
+* 업로드한 파일 확인
+    - curl -u 아이디:패스워드 http://oslab.pythonanywhere.com/uploads/uploaded_filename.ext
+* 아이디/패스워드는 수업 시간에 공개함
+
+## 실습 내용
 * 강의 자료에 나오는 hellomake 예제의 소스(\*.c, \*.h) 위치와 생성 파일(\*.o, hellomake)의 위치를 다음과 같이 한 후에 정상적으로 make가 되도록 Makefile을 수정하시오.
 불필요하게 반복적으로 src, objs를 쓰지 않도록 않도록 변수를 활용하시오.
     - Makefile
@@ -16,7 +25,7 @@
     4. 나머지 과정 진행
 * gdb 실습: 아래 stack.c 파일을 디버그 정보를 포함하여 컴파일 하고 다음 명령어들을 연습해보고, 역할에 대해 이해하고 설명하시오.
     * https://raw.githubusercontent.com/jyheo/raspberry_class/master/lecture-notes/stack.c
-    
+
 ```bash
 jyheo@JYHEO-LAPTOP:~/devtools$ gdb stack
 GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
