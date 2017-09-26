@@ -9,8 +9,7 @@
 * 아이디/패스워드는 수업 시간에 공개함
 
 ## 실습 내용
-* 강의 자료에 나오는 hellomake 예제의 소스(\*.c, \*.h) 위치와 생성 파일(\*.o, hellomake)의 위치를 다음과 같이 한 후에 정상적으로 make가 되도록 Makefile을 수정하시오.
-불필요하게 반복적으로 src, objs를 쓰지 않도록 않도록 변수를 활용하시오.
+* 강의 자료에 나오는 hellomake 예제의 소스(\*.c, \*.h) 위치와 생성 파일(\*.o, hellomake)의 위치를 다음과 같이 한 후에 정상적으로 make가 되도록 Makefile을 수정하시오. 불필요하게 반복적으로 src, objs를 쓰지 않도록 않도록 변수를 활용하시오.
     - Makefile
     - src/hellomake.c
     - src/hellofunc.c
@@ -18,6 +17,12 @@
     - objs/hellomake.o (오브젝트 코드)
     - objs/hellofunc.o (오브젝트 코드)
     - hellomake (최종 타겟, 실행 파일)
+    - 힌트: make를 하면 다음과 같이 실행이 되어야 함
+```bash
+gcc -c -Iinclude -o objs/hellomake.o src/hellomake.c -Wall
+gcc -c -Iinclude -o objs/hellofunc.o src/hellofunc.c -Wall
+gcc -o hellomake objs/hellomake.o objs/hellofunc.o
+```
 * printf 함수를 포함하고 있는 공유 라이브러리(.so)를 찾아서, 해당 라이브러리가 제공하는 함수의 총 개수를 구하시오.
     1. printf를 사용하는 프로그램을 만든다.(a.out)
     2. a.out이 사용하는 공유 라이브러리를 찾는다. 힌트: ldd
