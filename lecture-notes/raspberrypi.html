@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+       font-family: 'Yanone Kaffeesatz';
+       font-weight: 400;
+       margin-bottom: 0;
+       margin-top: 10px;
+      }
+      h1 { font-size: 60px; }
+      h2 { font-size: 3em; }
+      h3 { font-size: 1.6em; }
+      .remark-slide-content { font-size: 30px; }
+      .remark-slide-number { font-size: 18px; }
+      li { padding: 4px; }
+      li li { font-size: 80%; }
+      .footnote{ font-size: 13px; left: 50px; bottom: 12px; position: absolute; }
+      .top-line{ left: 0px; top: 0px; width: 100%; height: 1em; position: absolute; background-color: #0000a0}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      code { border-left: 6px solid orange; }
+      .left-column-70 {
+        width: 70%;
+        float: left;
+      }
+      .left-column-50 {
+        width: 50%;
+        float: left;
+      }
+      .right-column-30 {
+        width: 30%;
+        float: right;
+      }
+      .right-column-50 {
+        width: 50%;
+        float: right;
+      }
+      .right {
+        float: right;
+        margin-left: 1em;
+      }
+      strong {
+        color: red;
+      }
+      em {
+        color: darkblue;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 70%;
+      }
+      th, td {
+        text-align: left;
+      }
+      tr:nth-child(even){background-color: #f2f2f2}
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+      small {
+        font-size: 50%
+      }
+
+	  @page {
+		size: 1210px 681px;
+		margin: 0;
+	  }
+
+	  @media print {
+	    .remark-slide-scaler {
+		  width: 100% !important;
+		  height: 100% !important;
+		  transform: scale(1) !important;
+		  top: 0 !important;
+		  left: 0 !important;
+	    }
+	  }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+layout: true
+.top-line[]
+
+---
+class: center, middle
+
+# Beginning Raspberry Pi
+
+Junyoung Heo(jyheo@hansung.ac.kr)
+
+Oct. 2017
+
+---
+## Raspberry Pi
+* a series of credit card–sized single-board computers
+* developed in the UK by the Raspberry Pi Foundation
+    - promoting the teaching of basic computer science
+* Raspberry Pi 3 Spec.
+    - Broadcom BCM2837 SoC
+    - CPU: 1.2GHz quad-core ARM Cortex-A53
+    - 1GB RAM
+    - GPU: 400MHz VideoCore IV
+    - 4 USB ports, 40 GPIO pins, HDMI, Ethernet, 3.5mm audio jack, Micro SD slot
+![](https://www.raspberrypi.org/app/themes/mind-control/images/home-products-cta__image.png)
+
+---
+## Comparison of RPi Series
+![](https://hackadaycom.files.wordpress.com/2016/02/pispecs2.png?w=800&h=416)
+.footnote[Source: http://hackaday.com/2016/02/28/introducing-the-raspberry-pi-3/]
+
+---
+## OSes
+* **Raspbian** – based on Debian
+* Snappy Ubuntu core
+* Ubuntu mate
+* Windows 10 IoT core
+* OSMC – Open source media center
+* OpenELEC
+* Risc OS
+
+---
+## Installing Raspbian
+* Download the Image of raspbian
+    - https://www.raspberrypi.org/downloads/raspbian/
+* Writing the Image to the SD card (micro SD card)
+    - Etcher https://etcher.io/
+    ![](https://etcher.io/static/screenshot.gif)
+
+.footnote[https://www.raspberrypi.org/documentation/installation/installing-images/README.md]
+
+---
+## Installing Raspbian
+* Partition of the SD card
+![](images/sdcard.png)
+    - boot: files required to boot the raspbian
+        + FAT32. So, you can edit a file on Windows
+    - Raspbian image
+    - Free area: automatically extended to raspbian's root filesystem while first booting
+* Insert the SD card to Raspberry Pi 3/zero and turn on
+
+---
+## Recommended Tools (for Windows)
+* Notepad++ for Editor
+    - https://notepad-plus-plus.org/
+* Putty.exe for SSH client
+    - http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+---
+## WiFi Configuration
+* Create a file 'wpa_supplicant.conf' in boot partition of the SD card
+```bash
+country=GB
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+  scan_ssid=1
+  ssid="APname"
+  psk="passwordpassword"
+}
+```
+* Insert the SD card to Raspberry Pi 3/zero and turn on
+* The file 'wpa_supplicant.conf' will be moved to /etc/wpa_supplicant
+
+---
+## Enabling SSH
+* Create a file 'ssh' in boot partition of the SD card
+* Insert the SD card to Raspberry Pi 3/zero and turn on
+* SSH will be enabled and the file will be removed
+
+---
+## VNC
+* Raspbian contains RealVNC server
+* Enable VNC server
+    - $ sudo raspi-config
+    - enable VNC in interface menu
+* VNC Viewer download/install
+    - https://www.realvnc.com/en/connect/download/viewer/
+
+---
+## Package Upgrade & Installing Web Server
+* $ sudo apt update
+* $ sudo apt upgrade
+* $ sudo apt install apache2
+![](images/apache2.png)
+* /var/www/html/index.html
+* $ sudo nano /var/www/html/index.html
+    - Modify the HTML
+
+    </textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script>-->
+	<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+        var slideshow = remark.create({
+          ratio: '16:9',
+          highlightStyle: 'github',
+          highlightLines: true
+        });
+    </script>
+    <!--<script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>-->
+  </body>
+</html>
