@@ -68,16 +68,16 @@ Oct. 2017
 ---
 ## WiFi Configuration
 * Create a file 'wpa_supplicant.conf' in boot partition of the SD card
-```bash
-country=GB
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-network={
-  scan_ssid=1
-  ssid="APname"
-  psk="passwordpassword"
-}
-```
+	```bash
+	country=GB
+	ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+	update_config=1
+	network={
+	  scan_ssid=1
+	  ssid="APname"
+	  psk="passwordpassword"
+	}
+	```
 * Insert the SD card to Raspberry Pi 3/zero and turn on
 * The file 'wpa_supplicant.conf' will be moved to /etc/wpa_supplicant
 
