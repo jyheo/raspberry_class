@@ -1,6 +1,6 @@
 VERSION=0.9-prerelease
 
-TARGETS=linux-command.html devel-tools.html raspberrypi.html
+TARGETS=linux-command.html devel-tools.html raspberrypi.html raspberrypi-gpio.html
 
 html: $(TARGETS)
 
