@@ -1,29 +1,15 @@
-# README #
+# Raspberry Pi Lecture slides
 
-This README would normally document whatever steps are necessary to get your application up and running.
+* [Linux basic command](https://jyheo.github.io/raspberry_class/lecture-notes/linux-command.html)
+	- [Lab](https://jyheo.github.io/raspberry_class/lecture-notes/linux-command-lab.html)
+* [DevlToos Gcc, Make](https://jyheo.github.io/raspberry_class/lecture-notes/devel-tools.html)
+	- [Lab](https://jyheo.github.io/raspberry_class/lecture-notes/devel-tools-lab.html)
+* [Beginning Raspberry Pi](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi.html)
+* [Raspberry Pi GPIO](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-gpio.pptx)
+* [Python Flask](https://jyheo.github.io/raspberry_class/lecture-notes/python-flask.pptx)
+* [Raspberry Pi GPIO + Flask](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-gpio-flask.pptx)
+* [Raspberry Pi Analog Sensor YL40](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-analog-sensor-yl40.pptx)
+* [Raspberry Pi PWM Servo](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-gpio-pwm-servo.pptx)
+* [Raspberry Pi SPI Dot Matrix LED](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-SPI-dotmatrixled.pptx)
+* [Rapsberry Pi Camera](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-camera.html)
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
