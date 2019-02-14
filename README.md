@@ -5,6 +5,7 @@
 * [DevlToos Gcc, Make](https://jyheo.github.io/raspberry_class/lecture-notes/devel-tools.html)
 	- [Lab](https://jyheo.github.io/raspberry_class/lecture-notes/devel-tools-lab.html)
 * [Beginning Raspberry Pi](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi.html)
+* [Beginning Raspberry Pi w/ Serial](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-basic.pptx)
 * [Raspberry Pi GPIO](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-gpio.pptx)
 * [Python Flask](https://jyheo.github.io/raspberry_class/lecture-notes/python-flask.pptx)
 * [Raspberry Pi GPIO + Flask](https://jyheo.github.io/raspberry_class/lecture-notes/raspberrypi-gpio-flask.pptx)
